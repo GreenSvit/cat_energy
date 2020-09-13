@@ -1,0 +1,30 @@
+@mixin list-normalize {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin link-normalize {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin bottom-border {
+  content: "";
+  position: absolute;
+  width: calc(100% + 12vw);
+  height: 1px;
+  background-color: $borderGrey;
+  left: -6vw;
+
+  @media (min-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+@mixin green-line {
+  content: "";
+  position: absolute;
+  background-color: $basicGreen;
+  height: 2px;
+}

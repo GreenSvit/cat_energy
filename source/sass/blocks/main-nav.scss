@@ -1,0 +1,22 @@
+.main-nav {
+  max-height: 200px;
+  transition-property: max-height;
+  transition-duration: 0.5s;
+  overflow: hidden;
+
+  @media (min-width: $tabletWidth) {
+    overflow: visible;
+  }
+}
+
+.main-nav--closed-animation {
+  @media (max-width: $mobileWidth) {
+    max-height: 0;
+  }
+}
+
+.main-nav--closed {
+  @media (max-width: $mobileWidth) {
+    display: none;
+  }
+}

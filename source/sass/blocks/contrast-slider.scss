@@ -1,0 +1,125 @@
+.contrast-slider {
+  text-align: center;
+}
+
+.contrast-slider__list {
+  @include list-normalize;
+}
+
+.contrast-slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+
+    @media (max-width: $mobileWidth) {
+      margin-left: -19px;
+      margin-top: -6px;
+    }
+
+    @media (min-width: $tabletWidth) {
+      margin-left: 38px;
+    }
+
+    @media (min-width: $desktopWidth) {
+      margin-left: -30px;
+      margin-top: -3px;
+    }
+  }
+}
+
+.contrast-slider__indicator {
+  margin-top: 29px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tabletWidth) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 11px;
+    margin-left: 24px;
+  }
+
+  @media (min-width: $desktopWidth) {
+    margin-top: 31px;
+    margin-left: 9px;
+  }
+}
+
+.contrast-slider__status {
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  @media (min-width: $tabletWidth) {
+    border-bottom: 1px dotted $specialGrey2;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+      outline: none;
+    }
+  }
+}
+
+.contrast-slider__toggle {
+  box-sizing: border-box;
+  display: block;
+  width: 84px;
+  height: 14px;
+  border: 1px solid $lighterGrey2;
+  border-radius: 8px;
+  background-color: $white;
+  position: relative;
+  margin-left: 18px;
+  margin-right: 17px;
+
+  @media (min-width: $tabletWidth) {
+    margin-left: 24px;
+    margin-right: 20px;
+    width: 428px;
+    height: 6px;
+    border: none;
+    border-radius: 3px;
+    background-color: $ligherGrey3;
+  }
+}
+
+.contrast-slider__pin {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 35px;
+  height: 6px;
+  top: 3px;
+  left: 6px;
+  border-radius: 3px;
+  background-color: $basicGreen;
+
+  @media (min-width: $tabletWidth) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid $lighterGrey2;
+    box-shadow: inset 0 0 0 12px $white, 0 1px 3px rgba(0, 0, 0, 0.16);
+    top: -14px;
+    left: 197px;
+    cursor: pointer;
+
+    &:active {
+      border-color: $basicGreen;
+    }
+  }
+}

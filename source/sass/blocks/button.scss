@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  padding-bottom: 11px;
+  padding-top: 11px;
+  background-color: $basicGreen;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+
+  @media (min-width: $tabletWidth) {
+    padding-bottom: 13px;
+    padding-top: 13px;
+  }
+
+  &:hover {
+    background-color: $basicGreen2;
+  }
+
+  &:active {
+    background-color: $basicGreen2;
+    color: rgba($white, 0.3);
+  }
+}
